@@ -186,7 +186,7 @@ resource "aws_autoscaling_policy" "main" {
 }
 
 #this depends on target group
-resource "aws_lb_listener_rule" "main" {
+resource "aws_lb_listener_rule" "main" { 
   listener_arn = local.alb_listener_arn
   priority     = var.rule_priority
 
