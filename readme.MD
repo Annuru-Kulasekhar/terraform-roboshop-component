@@ -6,9 +6,9 @@ Reusable Terraform module for provisioning AWS infrastructure components for the
 
 ## 📌 Overview
 
-This module is designed to build modular, reusable infrastructure using Terraform for the Roboshop platform.
+This repository contains reusable Terraform modules used to provision and manage AWS infrastructure for the Roboshop microservices platform.
 
-It supports multi-environment deployments (dev / stage / prod) and follows Infrastructure as Code (IaC) best practices.
+The project follows Infrastructure as Code (IaC) best practices and supports scalable, multi-environment infrastructure deployments.
 
 ---
 
@@ -16,8 +16,9 @@ It supports multi-environment deployments (dev / stage / prod) and follows Infra
 
 - Build reusable AWS infrastructure components
 - Standardize Terraform code across environments
-- Support CI/CD based automation
-- Enable scalable microservices infrastructure
+- Support CI/CD based infrastructure automation
+- Enable scalable cloud-native deployments
+- Improve infrastructure consistency and maintainability
 
 ---
 
@@ -34,10 +35,10 @@ It supports multi-environment deployments (dev / stage / prod) and follows Infra
 ## 📁 Project Structure
 
 ```text
-main.tf        → Core resources
+main.tf        → Core resource definitions
 variables.tf   → Input variables
-locals.tf      → Local values and logic
-data.tf        → AWS data sources
+locals.tf      → Local values and reusable logic
+data.tf        → AWS data source references
 ```
 
 ---
@@ -50,19 +51,19 @@ data.tf        → AWS data sources
 terraform init
 ```
 
-### 2. Validate Configuration
+### 2. Validate Terraform Configuration
 
 ```bash
 terraform validate
 ```
 
-### 3. Plan Infrastructure
+### 3. Review Infrastructure Changes
 
 ```bash
 terraform plan
 ```
 
-### 4. Apply Infrastructure
+### 4. Provision Infrastructure
 
 ```bash
 terraform apply
@@ -70,32 +71,48 @@ terraform apply
 
 ---
 
-## 🔗 Integration
-
-This module is used in:
-
-- Roboshop EKS Infrastructure
-- Jenkins CI/CD pipelines
-- Multi-environment deployments (dev / stage / prod)
-
----
-
-## 📈 Improvements
-
-- Add remote backend using S3 
-- Add module versioning
-- Improve input/output variables
-- Add CI/CD pipeline integration
-- Add security hardening (IAM least privilege)
-
----
-
 ## 🔒 Remote Backend
 
-Terraform remote backend can be configured using:
+Terraform remote backend is configured using AWS S3 for:
 
-- AWS S3 for storing Terraform state files
-- AWS S3 for state locking and concurrency control
+- Storing Terraform state files
+- Native state locking using `use_lockfile = true`
+- Preventing concurrent Terraform executions
+- Supporting centralized infrastructure management
+
+---
+
+## 🔗 Integration
+
+This module is integrated with:
+
+- Roboshop EKS Infrastructure
+- Jenkins CI/CD Pipelines
+- Multi-environment deployments (Dev / Stage / Prod)
+- Infrastructure automation workflows
+
+---
+
+## 🚀 Features
+
+- Reusable Terraform modules
+- Infrastructure as Code (IaC)
+- Modular AWS infrastructure provisioning
+- CI/CD integration support
+- Scalable infrastructure design
+- Environment-based deployments
+- Secure and maintainable configurations
+
+---
+
+## 📈 Future Improvements
+
+- Add Terraform workspaces
+- Add module versioning
+- Improve input/output variables
+- Implement GitOps workflows
+- Add security hardening and policy checks
+- Add automated validation pipelines
 
 ---
 
