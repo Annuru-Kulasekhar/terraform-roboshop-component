@@ -33,7 +33,7 @@ It supports multi-environment deployments (dev / stage / prod) and follows Infra
 
 ## 📁 Project Structure
 
-```
+```text
 main.tf        → Core resources
 variables.tf   → Input variables
 locals.tf      → Local values and logic
@@ -82,7 +82,7 @@ This module is used in:
 
 ## 📈 Improvements
 
-- Add remote backend (S3 )
+- Add remote backend using S3 
 - Add module versioning
 - Improve input/output variables
 - Add CI/CD pipeline integration
@@ -90,7 +90,17 @@ This module is used in:
 
 ---
 
+## 🔒 Remote Backend
+
+Terraform remote backend can be configured using:
+
+- AWS S3 for storing Terraform state files
+- DynamoDB for state locking and concurrency control
+
+---
+
 ## 👨‍💻 Author
 
-Kulasekhar Annuru  
+Kulasekhar Annuru
+
 DevOps Engineer | AWS | Kubernetes | Terraform | Jenkins | CI/CD | DevSecOps
