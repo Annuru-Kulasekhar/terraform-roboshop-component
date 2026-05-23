@@ -33,11 +33,12 @@ It supports multi-environment deployments (dev / stage / prod) and follows Infra
 
 ## 📁 Project Structure
 
-main.tf → Core resource definitions
-variables.tf → Input variables
-locals.tf → Local values and logic
-data.tf → AWS data sources
-
+```
+main.tf        → Core resources
+variables.tf   → Input variables
+locals.tf      → Local values and logic
+data.tf        → AWS data sources
+```
 
 ---
 
@@ -47,29 +48,49 @@ data.tf → AWS data sources
 
 ```bash
 terraform init
-2. Validate Configuration
+```
+
+### 2. Validate Configuration
+
+```bash
 terraform validate
-3. Plan Infrastructure
+```
+
+### 3. Plan Infrastructure
+
+```bash
 terraform plan
-4. Apply Infrastructure
+```
+
+### 4. Apply Infrastructure
+
+```bash
 terraform apply
-🔗 Integration
+```
+
+---
+
+## 🔗 Integration
 
 This module is used in:
 
-Roboshop EKS Infrastructure
-Jenkins CI/CD pipelines
-Multi-environment deployments (dev/stage/prod)
-📈 Improvements
-Add remote backend (S3 + DynamoDB)
-Add module versioning
-Improve input/output variables
-Add CI/CD pipeline integration
-Add security hardening (IAM least privilege)
-👨‍💻 Author
-
-Kulasekhar Annuru
-DevOps Engineer | AWS | Kubernetes | Terraform | Jenkins | CI/CD | DevSecOps
-
+- Roboshop EKS Infrastructure
+- Jenkins CI/CD pipelines
+- Multi-environment deployments (dev / stage / prod)
 
 ---
+
+## 📈 Improvements
+
+- Add remote backend (S3 + DynamoDB)
+- Add module versioning
+- Improve input/output variables
+- Add CI/CD pipeline integration
+- Add security hardening (IAM least privilege)
+
+---
+
+## 👨‍💻 Author
+
+Kulasekhar Annuru  
+DevOps Engineer | AWS | Kubernetes | Terraform | Jenkins | CI/CD | DevSecOps
