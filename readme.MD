@@ -82,7 +82,7 @@ This module is used in:
 
 ## 📈 Improvements
 
-- Add remote backend (S3 + DynamoDB)
+- Add remote backend (S3 )
 - Add module versioning
 - Improve input/output variables
 - Add CI/CD pipeline integration
