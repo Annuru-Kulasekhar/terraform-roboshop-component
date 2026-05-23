@@ -95,7 +95,7 @@ This module is used in:
 Terraform remote backend can be configured using:
 
 - AWS S3 for storing Terraform state files
-- DynamoDB for state locking and concurrency control
+- AWS S3 for state locking and concurrency control
 
 ---
 
